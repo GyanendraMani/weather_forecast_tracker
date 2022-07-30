@@ -28,3 +28,60 @@ h1 {
     margin-top: -3px;
     @apply animate-ping bg-pink-800
 }
+@import '~antd/dist/antd.css';
+@import './components/styles/ObserverInfo.css';
+@import './components/styles/SatelliteList.css';
+@import './components/styles/WorldMap.css';
+
+.App-logo {
+  height: 60px;
+  padding-left: 30px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 23px;
+  align-content: center;
+  color : white
+}
+.annotation{
+  font-size: 20px;
+}
+
+.ant-layout-header {
+  background: #7dbcea;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  height: 65px;
+  width: 100%;
+  color: #1f6099;
+  box-shadow: rgb(220, 220, 220) 0 2px 10px;
+  background-image: url('./assets/download.jpg');
+  background-position-y: 60%;
+  background-position-x : 50%;
+  background-size: cover;
+}
+
+.ant-layout-footer {
+  position: fixed;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #2b4457;
+  color: #fff;
+  background-image: url('./assets/stars_footer.jpg');
+  background-position-y: 100%;
+  background-size: cover;
+  text-align: center;
+  height: 70px;
+}
+
+.ant-layout-content {
+  /* margin-top: 65px; */
+  background:#fff;
+  min-height: 120px;
+}
+
