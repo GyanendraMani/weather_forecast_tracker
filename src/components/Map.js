@@ -8,7 +8,7 @@
 // }
 
 // export default Map;
-import React from "react";
+import {React} from "react"
 import {
     Box,
     Button,
