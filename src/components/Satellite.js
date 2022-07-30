@@ -19,7 +19,7 @@ function Satellite() {
         <Main />
       </Content>
       <Footer >
-        <span className = "annotation">@2022 Weather Tracker. All Rights Reserved.</span>
+        <span className = "annotation">@2022 Weather Tracker App. All Rights Reserved.</span>
       </Footer>
     </Layout>
   );
