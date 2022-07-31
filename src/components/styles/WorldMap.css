@@ -1,0 +1,17 @@
+.track-info-panel {
+    margin-top: 20px;
+    margin-left: 55px;
+  }
+.track-info-panel button{
+  background-color: rgb(71, 1, 128);
+  border:rgb(165, 134, 209);
+}
+.progress-bar{
+  margin-top: 15px;
+}
+
+.time-stamp-container{
+  margin-top: 20px;
+  text-align: center;
+  color:rgb(88, 13, 23);
+}

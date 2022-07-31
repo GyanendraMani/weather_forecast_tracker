@@ -1,0 +1,24 @@
+.observer-info-container {
+    padding-left: 2%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    align-content: center;
+    
+  }
+
+  .observer-info-container button{
+    background-color: rgb(71, 1, 128);
+    border:rgb(165, 134, 209);
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .observer-info-container h5{
+    margin: 5px 0px;
+}
+
+.observer-info-container .ant-input-number{
+  width:56% !important;
+}

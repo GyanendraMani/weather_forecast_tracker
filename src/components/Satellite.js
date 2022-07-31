@@ -1,11 +1,28 @@
-import React from "react";
 
+import React from 'react';
+// import starlinkLogo from '../assets/starlink_logo.svg';
+import { Layout } from 'antd';
+import Main from './co-components/Main';
 
-const Satellite = () => {
+const { Header, Footer, Content } = Layout;
 
-    return(
-        <h1>hello satellite</h1>
-    )
+function Satellite() {
+  return (
+    <Layout>
+      <Header>
+        {/* <img src={starlinkLogo} className="App-logo" alt="logo" /> */}
+        <p className="title">
+        Track Satellites
+        </p>
+      </Header>
+      <Content>
+        <Main />
+      </Content>
+      <Footer >
+        <span className = "annotation">@2022 Weather Tracker. All Rights Reserved.</span>
+      </Footer>
+    </Layout>
+  );
 }
 
 export default Satellite;

@@ -1,14 +1,3 @@
-// import React from "react";
-
-// const Map = () => {
-
-//     return (
-//         <h1>hello map</h1>
-//     )
-// }
-
-// export default Map;
-import {React} from "react"
 import {
     Box,
     Button,
@@ -160,5 +149,4 @@ import {
     )
   }
   
-  export default Map;
-  
+  export default Map
