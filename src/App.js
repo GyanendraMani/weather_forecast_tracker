@@ -4,6 +4,13 @@ import Weather from "./components/Weather";
 import Map from "./components/Map";
 import News from "./components/News";
 import Satellite from "./components/Satellite"
+import NewsCricket from "./components/co-components/News-Cricket";
+import NewsMH from "./components/co-components/News-Mh";
+import NewsIsro from "./components/co-components/News-isro";
+import NewsUpsc from "./components/co-components/News-Upsc";
+import NewsBolly from "./components/co-components/News-Bolly";
+import NewsTop from "./components/co-components/News-Top";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -71,10 +78,15 @@ function App() {
             REACT_APP_ICON_URL={REACT_APP_ICON_URL} />
           } />
 
-        <Route exact path="/satellite"
-          element={<Satellite />} />
-        <Route exact path="/news"
-          element={<News />} />
+        <Route exact path="/satellite" element={<Satellite />} />
+        <Route exact path="/news/" element={<News />} >
+          <Route index={true} element={<NewsTop newsName="iphone" />} ></Route>
+          <Route exact path="cricket" element={<NewsCricket newsName="cricket" />} ></Route>
+          <Route exact path="bollywood" element={<NewsBolly newsName="bollywood" />} ></Route>
+          <Route exact path="mh" element={<NewsMH newsName="maharashtra" />} ></Route>
+          <Route exact path="isro" element={<NewsIsro newsName="isro" />} ></Route>
+          <Route exact path="upsc" element={<NewsUpsc newsName="upsc" />} ></Route>
+        </Route>
 
       </Routes>
 
