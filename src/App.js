@@ -21,6 +21,7 @@ import {
 function App() {
   const API_KEY = process.env.REACT_APP_API_KEY
   const REACT_APP_ICON_URL = 'http://openweathermap.org/img/wn/'
+  const NEWS_API_KEY = '2a4be4bf02d3462caa8ca78028295227'
 
   const [noData, setNoData] = useState('No Data Yet')
   const [searchTerm, setSearchTerm] = useState('mumbai')
@@ -80,12 +81,12 @@ function App() {
 
         <Route exact path="/satellite" element={<Satellite />} />
         <Route exact path="/news/" element={<News />} >
-          <Route index={true} element={<NewsTop newsName="iphone" />} ></Route>
-          <Route exact path="cricket" element={<NewsCricket newsName="cricket" />} ></Route>
-          <Route exact path="bollywood" element={<NewsBolly newsName="bollywood" />} ></Route>
-          <Route exact path="mh" element={<NewsMH newsName="maharashtra" />} ></Route>
-          <Route exact path="isro" element={<NewsIsro newsName="isro" />} ></Route>
-          <Route exact path="upsc" element={<NewsUpsc newsName="upsc" />} ></Route>
+          <Route index={true} element={<NewsTop newsName="iphone" NEWS_API_KEY={NEWS_API_KEY} />} ></Route>
+          <Route exact path="cricket" element={<NewsCricket newsName="cricket" NEWS_API_KEY={NEWS_API_KEY} />} ></Route>
+          <Route exact path="bollywood" element={<NewsBolly newsName="bollywood" NEWS_API_KEY={NEWS_API_KEY} />} ></Route>
+          <Route exact path="mh" element={<NewsMH newsName="maharashtra" NEWS_API_KEY={NEWS_API_KEY} />} ></Route>
+          <Route exact path="isro" element={<NewsIsro newsName="isro" NEWS_API_KEY={NEWS_API_KEY} />} ></Route>
+          <Route exact path="upsc" element={<NewsUpsc newsName="upsc" NEWS_API_KEY={NEWS_API_KEY} />} ></Route>
         </Route>
 
       </Routes>

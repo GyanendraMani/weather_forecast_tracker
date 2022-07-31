@@ -8,7 +8,7 @@ class NewsBolly extends React.Component {
     }
     async componentDidMount() {
         let res = await fetch(
-            `https://newsapi.org/v2/everything?q=${this.props.newsName}&apiKey=39c3025e706146f99c1db7b6e2295f6e`
+            `https://newsapi.org/v2/everything?q=${this.props.newsName}&apiKey=${this.props.NEWS_API_KEY}`
         );
         let data = await res.json();
         let arr = data.articles.map((p) => {
