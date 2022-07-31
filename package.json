@@ -1,5 +1,5 @@
 {
-  "name": "weather-forcast-app",
+  "name": "weather-tracker-app",
   "version": "0.1.0",
   "author": "GyanendraMani",
   "private": true,
@@ -24,7 +24,7 @@
     "react-simple-maps": "^3.0.0",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "craco start",
