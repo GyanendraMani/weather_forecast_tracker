@@ -20,11 +20,11 @@ function Header() {
                         <Link to="/">Weather</Link>
                     </span>
                     <span class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">
-                        <Link to="/map">Map</Link>
+                        <Link to="/todo-app">ToDo List</Link>
                     </span>
-                    <span class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">
+                    {/* <span class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">
                         <Link to="/satellite">Satellite</Link>
-                    </span>
+                    </span> */}
                     <span class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">
                         <Link to="/news">News</Link>
                     </span>

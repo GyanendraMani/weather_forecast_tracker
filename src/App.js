@@ -10,6 +10,7 @@ import NewsIsro from "./components/co-components/News-isro";
 import NewsUpsc from "./components/co-components/News-Upsc";
 import NewsBolly from "./components/co-components/News-Bolly";
 import NewsTop from "./components/co-components/News-Top";
+import TodoApp from "./components/TodoApp";
 
 import {
   BrowserRouter as Router,
@@ -68,8 +69,8 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route exact path="/map"
-          element={<Map />} />
+        <Route exact path="/todo-app"
+          element={<TodoApp />} />
         <Route exact path="/"
           element={<Weather weatherData={weatherData} handleSubmit={handleSubmit}
             handleChange={handleChange} myIP={myIP}

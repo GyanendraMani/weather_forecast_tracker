@@ -7,6 +7,7 @@ class NewsTop extends React.Component {
 
     }
     async componentDidMount() {
+        console.log("printing props", this.props)
         let res = await fetch(
             `https://newsapi.org/v2/top-headlines?country=in&apiKey=${this.props.NEWS_API_KEY}`
         );
