@@ -3,7 +3,15 @@ import TodoForm from './TodoForm';
 import Todo from './Todo';
 
 function TodoList() {
-  const [todos, setTodos] = useState([]);
+  let getTodosItem = localStorage.getItem("todos");
+  let todosItem = JSON.parse(getTodosItem)
+
+  const [todos, setTodos] = useState(todosItem);
+
+  console.log("printing ", todos)
+  if (todos.length != 0) {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }
 
   const addTodo = todo => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -12,8 +20,10 @@ function TodoList() {
 
     const newTodos = [todo, ...todos];
 
-    setTodos(newTodos);
-    console.log(...todos);
+    localStorage.setItem("todos", JSON.stringify(newTodos))
+    let item = localStorage.getItem("todos");
+    setTodos(JSON.parse(item));
+
   };
 
   const updateTodo = (todoId, newValue) => {
@@ -22,12 +32,17 @@ function TodoList() {
     }
 
     setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
+    localStorage.setItem("todos", JSON.stringify(todos))
   };
 
   const removeTodo = id => {
     const removedArr = [...todos].filter(todo => todo.id !== id);
 
-    setTodos(removedArr);
+    localStorage.setItem("todos", JSON.stringify(removedArr))
+
+    let item = localStorage.getItem("todos");
+    setTodos(JSON.parse(item));
+
   };
 
   const completeTodo = id => {
@@ -37,6 +52,7 @@ function TodoList() {
       }
       return todo;
     });
+
     setTodos(updatedTodos);
   };
 
